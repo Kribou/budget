@@ -1,0 +1,47 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "org.hanquez.budget",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "monolith",
+    "baseName": "budget",
+    "packageName": "org.hanquez.budget",
+    "packageFolder": "org/hanquez/budget",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "ZTUxNjc0YTU1YzM2ODA2MmE5Y2NkYjc0YTI5N2QyNGNiM2Q2MTAyMzkyZDUwMGExZDVhMWEyNDYzM2FkNjI4OGM5ZDIwNmZmMDNhNjMzYTYzMzQ1MzZiODBhM2I0NzNmZjZlMzE3OWE1N2Q0OTI4NmM4YTE3OGEzMTQwOTZlMWE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": [
+      "gatling",
+      "protractor"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "fr",
+    "languages": [
+      "fr"
+    ],
+    "blueprints": []
+  }
+}
