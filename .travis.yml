@@ -37,7 +37,7 @@ script:
   - ./mvnw -ntp clean verify -Pprod -DskipTests
   - ./mvnw -ntp com.github.eirslett:frontend-maven-plugin:npm -Dfrontend.npm.arguments='run test-ci' -Dmaven.repo.local=$MAVEN_USER_HOME
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - ./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.organization=ghanquez -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+  - ./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=ghanquez_budget
 notifications:
   webhooks:
     on_success: change # options: [always|never|change] default: always
@@ -47,4 +47,4 @@ addons:
   sonarcloud:
     organization: 'ghanquez'
     token:
-      secure: 'VS9vOrugrgbXQLfT2wnAudu8D6z3tHkzaYaPNQMYiP7ru4FWoyBCEaBJcyisEc9+/7IQSovoqarL2FWqZWAFL0tTmt8jeudj6ESPsUKt8xMhD27K9xpNCP0RZDiyk6b6T4h9eMJZp5ZjAIFeR33QBcJ3N797b6pSlRdvDyLhoAbqLN3UVOsZ0mekmij6pm+gSfFhXrFKCfZH+hBo17aNF2pUsKGbkbguJJ2NRkC8W15+vB/NcP3w62g4lE3yMhzEcgZNGSdEk1JMIyE2M/BjY9TmY7o92IwgsxFisCvPvU5eVKSlVbbrzK8Rub4T2ATKXN626XcQWA05zxFzTzmF+63de8hfylXDRiuUt1G4GdVh5HDrptBFTf8pMFaJkK3nmB8bTVHejLDATuY9JkxNSpdGCV85FrAk2/Jx90FSConA3E9wlohBhcock5uuGvlECZq8PxLzjqMbbzQHRPdbF3O3rsHC8DjO+U6CVV8FXy3JL6MjjcRoqb6OODOt8MdH7N9rLWoty8yNk2Sa3xl6OGlhHVwm0eHEUnwB32yTxiBE/ZE9g8ij+qSuJfSIXu+TuT7r4VBR4tfwB3aC1JoWBLL9qh5juRnP7XjC1RUz9eKffMjGeqB3HvwYIR4UgWv3meDnhWBp6y4kQIdCdN22gkPWo599V0IEUH6OI/2l/MQ='
+      secure: 'h2Qblz8m+MmBaluj3XwiwXuxdUsznCSdlRZe/QE2gPjlT306TR47GpUCkxfm7DjmMYKiAyq2rdt5pPz+9bYKUasN/u0GoLNs5lVJzErLAZEseJAe6YlBASMUwBt7EF88/t67bu1RXnv3CIFtYHselIRDU61suxznHdZcScmRXak9F7SAt7HF2WTMwQO2OjPf0bdghxh3o3eQMN5jAexhHcsNc3GN7YrySjRJxnWYcPv1mobEkNjgSNUfLsO20XEbQmmF/0ON0tQCQq2N+qifYwSuqllIUSuModAG4Tl6komJNuFlbfI89iqRMJL1hfK0WJ9laJs/0FPcF5GvkZ5nEmORhlIx+ckg6A0n9c/M4uR5LvsNOODtVz8yDH5TYcSVClEoFRdoOhkXj+WmAs9bz1gb/uXA6v7t2g0S6IT0m1dDf72sHCl78c1p0jx2dNDFJaMBKSFxEVO6xKJWS7CwgveMscl2L2wyxvFEdGAF90RfY4hs1lqGkl+3IgH6iElU3BumugqqCM5h1aiiMakOt8kH35vFPCcUuynJlNXqVsmp8tymvJwV/VZ2x3mjG+rEHzlP8gFq9d6TIVs3L0u2j23C5f0vG6Gjm/PEDfJ2CNBX03G1WjYQAMIktPYXPJQ/ZlmFDE0+TlwDBp3P6N+6y036nPQue9NVMlkiW0V9+TQ='
