@@ -44,8 +44,15 @@ script:
   - if [ $TRAVIS_PULL_REQUEST == "false" ]; then ./mvnw -ntp org.jacoco:jacoco-maven-plugin:prepare-agent initialize sonar:sonar -Dsonar.organization=ghanquez -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN; fi
   - ./mvnw -ntp verify -Pprod -DskipTests
   - ./mvnw -ntp com.heroku.sdk:heroku-maven-plugin:2.0.5:deploy -DskipTests -Pprod -Dheroku.buildpacks=heroku/jvm -Dheroku.appName=budget
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 notifications:
   webhooks:
     on_success: change # options: [always|never|change] default: always
     on_failure: always # options: [always|never|change] default: always
     on_start: false # default: false
+addons:
+  sonarcloud:
+    organization: 'ghanquez'
+    token:
+      secure: 'VS9vOrugrgbXQLfT2wnAudu8D6z3tHkzaYaPNQMYiP7ru4FWoyBCEaBJcyisEc9+/7IQSovoqarL2FWqZWAFL0tTmt8jeudj6ESPsUKt8xMhD27K9xpNCP0RZDiyk6b6T4h9eMJZp5ZjAIFeR33QBcJ3N797b6pSlRdvDyLhoAbqLN3UVOsZ0mekmij6pm+gSfFhXrFKCfZH+hBo17aNF2pUsKGbkbguJJ2NRkC8W15+vB/NcP3w62g4lE3yMhzEcgZNGSdEk1JMIyE2M/BjY9TmY7o92IwgsxFisCvPvU5eVKSlVbbrzK8Rub4T2ATKXN626XcQWA05zxFzTzmF+63de8hfylXDRiuUt1G4GdVh5HDrptBFTf8pMFaJkK3nmB8bTVHejLDATuY9JkxNSpdGCV85FrAk2/Jx90FSConA3E9wlohBhcock5uuGvlECZq8PxLzjqMbbzQHRPdbF3O3rsHC8DjO+U6CVV8FXy3JL6MjjcRoqb6OODOt8MdH7N9rLWoty8yNk2Sa3xl6OGlhHVwm0eHEUnwB32yTxiBE/ZE9g8ij+qSuJfSIXu+TuT7r4VBR4tfwB3aC1JoWBLL9qh5juRnP7XjC1RUz9eKffMjGeqB3HvwYIR4UgWv3meDnhWBp6y4kQIdCdN22gkPWo599V0IEUH6OI/2l/MQ='
