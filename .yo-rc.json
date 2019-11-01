@@ -29,19 +29,16 @@
     "clientFramework": "react",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "testFrameworks": [
-      "gatling",
-      "protractor"
-    ],
+    "testFrameworks": ["gatling", "protractor"],
     "jhiPrefix": "jhi",
     "entitySuffix": "",
     "dtoSuffix": "DTO",
     "otherModules": [],
     "enableTranslation": true,
     "nativeLanguage": "fr",
-    "languages": [
-      "fr"
-    ],
-    "blueprints": []
+    "languages": ["fr"],
+    "blueprints": [],
+    "herokuAppName": "hudget",
+    "herokuDeployType": "git"
   }
 }
