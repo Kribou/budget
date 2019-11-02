@@ -37,7 +37,7 @@ script:
   - ./mvnw -ntp clean verify -Pprod -DskipTests
   - ./mvnw -ntp com.github.eirslett:frontend-maven-plugin:npm -Dfrontend.npm.arguments='run test-ci' -Dmaven.repo.local=$MAVEN_USER_HOME
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - ./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=ghanquez_budget -Dsonar.organization=ghanquez -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=c24e9a2c2d26b599439247702ff1822794a99e61
+  - ./mvnw org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=ghanquez_budget -Dsonar.organization=ghanquez -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=c24e9a2c2d26b599439247702ff1822794a99e61
 notifications:
   webhooks:
     on_success: change # options: [always|never|change] default: always
