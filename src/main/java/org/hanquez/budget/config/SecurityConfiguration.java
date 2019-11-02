@@ -1,10 +1,8 @@
 package org.hanquez.budget.config;
 
-import org.hanquez.budget.security.*;
-import org.hanquez.budget.security.jwt.*;
-
-import org.springframework.beans.factory.BeanInitializationException;
-import org.springframework.beans.factory.InitializingBean;
+import org.hanquez.budget.security.AuthoritiesConstants;
+import org.hanquez.budget.security.jwt.JWTConfigurer;
+import org.hanquez.budget.security.jwt.TokenProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpMethod;
