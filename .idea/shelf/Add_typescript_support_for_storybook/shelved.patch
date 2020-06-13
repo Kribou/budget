@@ -1,0 +1,678 @@
+Index: tsconfig.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"compilerOptions\": {\n    \"jsx\": \"react\",\n    \"target\": \"es6\",\n    \"module\": \"esnext\",\n    \"moduleResolution\": \"node\",\n    \"sourceMap\": true,\n    \"emitDecoratorMetadata\": true,\n    \"experimentalDecorators\": true,\n    \"removeComments\": false,\n    \"noImplicitAny\": false,\n    \"suppressImplicitAnyIndexErrors\": true,\n    \"outDir\": \"target/classes/static/app\",\n    \"lib\": [\"es2015\", \"es2017\", \"dom\"],\n    \"types\": [\"webpack-env\", \"jest\"],\n    \"allowJs\": true,\n    \"checkJs\": false,\n    \"baseUrl\": \"./\",\n    \"paths\": {\n      \"app/*\": [\"src/main/webapp/app/*\"]\n    },\n    \"importHelpers\": true,\n    \"esModuleInterop\": true,\n    \"allowSyntheticDefaultImports\": true\n  },\n  \"include\": [\"src/main/webapp/app\", \"src/test/javascript/spec\"],\n  \"exclude\": [\"node_modules\", \"server\"]\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- tsconfig.json	(revision 580151209b6a40bb7f9eb8a72b2edb4ddc3c145e)
++++ tsconfig.json	(date 1582394264771)
+@@ -13,7 +13,7 @@
+     "outDir": "target/classes/static/app",
+     "lib": ["es2015", "es2017", "dom"],
+     "types": ["webpack-env", "jest"],
+-    "allowJs": true,
++    "allowJs": false,
+     "checkJs": false,
+     "baseUrl": "./",
+     "paths": {
+@@ -21,8 +21,9 @@
+     },
+     "importHelpers": true,
+     "esModuleInterop": true,
+-    "allowSyntheticDefaultImports": true
++    "allowSyntheticDefaultImports": true,
++    "rootDirs": ["src/main/webapp/app", "stories"]
+   },
+-  "include": ["src/main/webapp/app", "src/test/javascript/spec"],
++  "include": ["src/main/webapp/app", "src/test/javascript/spec", "stories"],
+   "exclude": ["node_modules", "server"]
+ }
+Index: package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- package-lock.json	(revision 580151209b6a40bb7f9eb8a72b2edb4ddc3c145e)
++++ package-lock.json	(date 1582393293115)
+@@ -1055,6 +1055,12 @@
+         }
+       }
+     },
++    "@babel/standalone": {
++      "version": "7.8.4",
++      "resolved": "https://registry.npmjs.org/@babel/standalone/-/standalone-7.8.4.tgz",
++      "integrity": "sha512-c/PomWPyLeCAnldfMGL2wNbu4OcseDObGhpK6WGfwqHWW+t9TNB7ENF/uWw/GtWv1wOnbPOb6U+uj2Q5ki1HLg==",
++      "dev": true
++    },
+     "@babel/template": {
+       "version": "7.8.3",
+       "resolved": "https://registry.npmjs.org/@babel/template/-/template-7.8.3.tgz",
+@@ -1117,6 +1123,12 @@
+         "to-fast-properties": "^2.0.0"
+       }
+     },
++    "@base2/pretty-print-object": {
++      "version": "1.0.0",
++      "resolved": "https://registry.npmjs.org/@base2/pretty-print-object/-/pretty-print-object-1.0.0.tgz",
++      "integrity": "sha512-4Th98KlMHr5+JkxfcoDT//6vY8vM+iSPrLNpHhRyLx2CFYi8e2RfqPLdpbnpo0Q5lQC5hNB79yes07zb02fvCw==",
++      "dev": true
++    },
+     "@cnakazawa/watch": {
+       "version": "1.0.4",
+       "resolved": "https://registry.npmjs.org/@cnakazawa/watch/-/watch-1.0.4.tgz",
+@@ -1716,6 +1728,29 @@
+         }
+       }
+     },
++    "@storybook/addon-info": {
++      "version": "5.3.13",
++      "resolved": "https://registry.npmjs.org/@storybook/addon-info/-/addon-info-5.3.13.tgz",
++      "integrity": "sha512-pH/ZJ/wuuZ2X1vxoLeO97/M4KVaWPt+YR6kY/abw+7Z1PG80DUW3saBcRmb+pexnBVReHe0MFAb3vo57l+MwCA==",
++      "dev": true,
++      "requires": {
++        "@storybook/addons": "5.3.13",
++        "@storybook/client-logger": "5.3.13",
++        "@storybook/components": "5.3.13",
++        "@storybook/theming": "5.3.13",
++        "core-js": "^3.0.1",
++        "global": "^4.3.2",
++        "marksy": "^8.0.0",
++        "nested-object-assign": "^1.0.3",
++        "prop-types": "^15.7.2",
++        "react": "^16.8.3",
++        "react-addons-create-fragment": "^15.6.2",
++        "react-element-to-jsx-string": "^14.0.2",
++        "react-is": "^16.8.3",
++        "react-lifecycles-compat": "^3.0.4",
++        "util-deprecate": "^1.0.2"
++      }
++    },
+     "@storybook/addon-links": {
+       "version": "5.3.13",
+       "resolved": "https://registry.npmjs.org/@storybook/addon-links/-/addon-links-5.3.13.tgz",
+@@ -2460,6 +2495,12 @@
+         }
+       }
+     },
++    "@storybook/preset-typescript": {
++      "version": "1.2.0",
++      "resolved": "https://registry.npmjs.org/@storybook/preset-typescript/-/preset-typescript-1.2.0.tgz",
++      "integrity": "sha512-GQKTgMkhOyi+UC6kHTnVKCDwIO5qO0WsT1VzCOnbmShSKez/e6/GXs+/zyw3C56KU6gQHQpV10CJizFJozJWDw==",
++      "dev": true
++    },
+     "@storybook/react": {
+       "version": "5.3.13",
+       "resolved": "https://registry.npmjs.org/@storybook/react/-/react-5.3.13.tgz",
+@@ -3112,6 +3153,17 @@
+       "integrity": "sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==",
+       "dev": true
+     },
++    "@types/storybook__addon-info": {
++      "version": "5.2.1",
++      "resolved": "https://registry.npmjs.org/@types/storybook__addon-info/-/storybook__addon-info-5.2.1.tgz",
++      "integrity": "sha512-sUP6gXXNu7VPYhacysIptr6bLTJyJfZWdvFyd80cPNfDoAzFzGM0oMn4ENfTeZcezikO+1Lu7gJKLgheS5H2og==",
++      "dev": true,
++      "requires": {
++        "@storybook/addons": "^5.2.0",
++        "@storybook/react": "^5.2.0",
++        "@types/react": "*"
++      }
++    },
+     "@types/webpack-env": {
+       "version": "1.14.1",
+       "resolved": "https://registry.npmjs.org/@types/webpack-env/-/webpack-env-1.14.1.tgz",
+@@ -3377,6 +3429,49 @@
+         "@xtuc/long": "4.2.2"
+       }
+     },
++    "@webpack-contrib/schema-utils": {
++      "version": "1.0.0-beta.0",
++      "resolved": "https://registry.npmjs.org/@webpack-contrib/schema-utils/-/schema-utils-1.0.0-beta.0.tgz",
++      "integrity": "sha512-LonryJP+FxQQHsjGBi6W786TQB1Oym+agTpY0c+Kj8alnIw+DLUJb6SI8Y1GHGhLCH1yPRrucjObUmxNICQ1pg==",
++      "dev": true,
++      "requires": {
++        "ajv": "^6.1.0",
++        "ajv-keywords": "^3.1.0",
++        "chalk": "^2.3.2",
++        "strip-ansi": "^4.0.0",
++        "text-table": "^0.2.0",
++        "webpack-log": "^1.1.2"
++      },
++      "dependencies": {
++        "ansi-regex": {
++          "version": "3.0.0",
++          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.0.tgz",
++          "integrity": "sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=",
++          "dev": true
++        },
++        "strip-ansi": {
++          "version": "4.0.0",
++          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-4.0.0.tgz",
++          "integrity": "sha1-qEeQIusaw2iocTibY1JixQXuNo8=",
++          "dev": true,
++          "requires": {
++            "ansi-regex": "^3.0.0"
++          }
++        },
++        "webpack-log": {
++          "version": "1.2.0",
++          "resolved": "https://registry.npmjs.org/webpack-log/-/webpack-log-1.2.0.tgz",
++          "integrity": "sha512-U9AnICnu50HXtiqiDxuli5gLB5PGBo7VvcHx36jRZHwK4vzOYLbImqT4lwWwoMHdQWwEKw736fCHEekokTEKHA==",
++          "dev": true,
++          "requires": {
++            "chalk": "^2.1.0",
++            "log-symbols": "^2.1.0",
++            "loglevelnext": "^1.0.1",
++            "uuid": "^3.1.0"
++          }
++        }
++      }
++    },
+     "@xtuc/ieee754": {
+       "version": "1.2.0",
+       "resolved": "https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-1.2.0.tgz",
+@@ -7219,6 +7314,16 @@
+       "integrity": "sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=",
+       "dev": true
+     },
++    "d": {
++      "version": "1.0.1",
++      "resolved": "https://registry.npmjs.org/d/-/d-1.0.1.tgz",
++      "integrity": "sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA==",
++      "dev": true,
++      "requires": {
++        "es5-ext": "^0.10.50",
++        "type": "^1.0.1"
++      }
++    },
+     "dargs": {
+       "version": "6.1.0",
+       "resolved": "https://registry.npmjs.org/dargs/-/dargs-6.1.0.tgz",
+@@ -8127,6 +8232,15 @@
+       "integrity": "sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=",
+       "dev": true
+     },
++    "encoding": {
++      "version": "0.1.12",
++      "resolved": "https://registry.npmjs.org/encoding/-/encoding-0.1.12.tgz",
++      "integrity": "sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=",
++      "dev": true,
++      "requires": {
++        "iconv-lite": "~0.4.13"
++      }
++    },
+     "end-of-stream": {
+       "version": "1.4.4",
+       "resolved": "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.4.tgz",
+@@ -8465,6 +8579,17 @@
+         "is-symbol": "^1.0.2"
+       }
+     },
++    "es5-ext": {
++      "version": "0.10.53",
++      "resolved": "https://registry.npmjs.org/es5-ext/-/es5-ext-0.10.53.tgz",
++      "integrity": "sha512-Xs2Stw6NiNHWypzRTY1MtaG/uJlwCk8kH81920ma8mvN8Xq1gsfhZvpkImLQArw8AHnv8MT2I45J3c0R8slE+Q==",
++      "dev": true,
++      "requires": {
++        "es6-iterator": "~2.0.3",
++        "es6-symbol": "~3.1.3",
++        "next-tick": "~1.0.0"
++      }
++    },
+     "es5-shim": {
+       "version": "4.5.13",
+       "resolved": "https://registry.npmjs.org/es5-shim/-/es5-shim-4.5.13.tgz",
+@@ -8477,6 +8602,17 @@
+       "integrity": "sha512-Um/+FxMr9CISWh0bi5Zv0iOD+4cFh5qLeks1qhAopKVAJw3drgKbKySikp7wGhDL0HPeaja0P5ULZrxLkniUVg==",
+       "dev": true
+     },
++    "es6-iterator": {
++      "version": "2.0.3",
++      "resolved": "https://registry.npmjs.org/es6-iterator/-/es6-iterator-2.0.3.tgz",
++      "integrity": "sha1-p96IkUGgWpSwhUQDstCg+/qY87c=",
++      "dev": true,
++      "requires": {
++        "d": "1",
++        "es5-ext": "^0.10.35",
++        "es6-symbol": "^3.1.1"
++      }
++    },
+     "es6-promise": {
+       "version": "4.2.8",
+       "resolved": "https://registry.npmjs.org/es6-promise/-/es6-promise-4.2.8.tgz",
+@@ -8489,6 +8625,16 @@
+       "integrity": "sha512-E9kK/bjtCQRpN1K28Xh4BlmP8egvZBGJJ+9GtnzOwt7mdqtrjHFuVGr7QJfdjBIKqrlU5duPf3pCBoDrkjVYFg==",
+       "dev": true
+     },
++    "es6-symbol": {
++      "version": "3.1.3",
++      "resolved": "https://registry.npmjs.org/es6-symbol/-/es6-symbol-3.1.3.tgz",
++      "integrity": "sha512-NJ6Yn3FuDinBaBRWl/q5X/s4koRHBrgKAu+yGI6JCBeiu3qrcbJhwT2GeR/EXVfylRk8dpQVJoLEFhK+Mu31NA==",
++      "dev": true,
++      "requires": {
++        "d": "^1.0.1",
++        "ext": "^1.1.2"
++      }
++    },
+     "escape-html": {
+       "version": "1.0.3",
+       "resolved": "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz",
+@@ -9169,6 +9315,23 @@
+           "resolved": "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz",
+           "integrity": "sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=",
+           "dev": true
++        }
++      }
++    },
++    "ext": {
++      "version": "1.4.0",
++      "resolved": "https://registry.npmjs.org/ext/-/ext-1.4.0.tgz",
++      "integrity": "sha512-Key5NIsUxdqKg3vIsdw9dSuXpPCQ297y6wBjL30edxwPgt2E44WcWBZey/ZvUc6sERLTxKdyCu4gZFmUbk1Q7A==",
++      "dev": true,
++      "requires": {
++        "type": "^2.0.0"
++      },
++      "dependencies": {
++        "type": {
++          "version": "2.0.0",
++          "resolved": "https://registry.npmjs.org/type/-/type-2.0.0.tgz",
++          "integrity": "sha512-KBt58xCHry4Cejnc2ISQAF7QY+ORngsWfxezO68+12hKV6lQY8P/psIkcbjeHWn7MqcgciWJyCCevFMJdIXpow==",
++          "dev": true
+         }
+       }
+     },
+@@ -9372,6 +9535,44 @@
+         "bser": "2.1.1"
+       }
+     },
++    "fbjs": {
++      "version": "0.8.17",
++      "resolved": "https://registry.npmjs.org/fbjs/-/fbjs-0.8.17.tgz",
++      "integrity": "sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=",
++      "dev": true,
++      "requires": {
++        "core-js": "^1.0.0",
++        "isomorphic-fetch": "^2.1.1",
++        "loose-envify": "^1.0.0",
++        "object-assign": "^4.1.0",
++        "promise": "^7.1.1",
++        "setimmediate": "^1.0.5",
++        "ua-parser-js": "^0.7.18"
++      },
++      "dependencies": {
++        "core-js": {
++          "version": "1.2.7",
++          "resolved": "https://registry.npmjs.org/core-js/-/core-js-1.2.7.tgz",
++          "integrity": "sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=",
++          "dev": true
++        },
++        "promise": {
++          "version": "7.3.1",
++          "resolved": "https://registry.npmjs.org/promise/-/promise-7.3.1.tgz",
++          "integrity": "sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==",
++          "dev": true,
++          "requires": {
++            "asap": "~2.0.3"
++          }
++        },
++        "ua-parser-js": {
++          "version": "0.7.21",
++          "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.21.tgz",
++          "integrity": "sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==",
++          "dev": true
++        }
++      }
++    },
+     "fecha": {
+       "version": "2.3.3",
+       "resolved": "https://registry.npmjs.org/fecha/-/fecha-2.3.3.tgz",
+@@ -13140,6 +13341,28 @@
+       "integrity": "sha1-TkMekrEalzFjaqH5yNHMvP2reN8=",
+       "dev": true
+     },
++    "isomorphic-fetch": {
++      "version": "2.2.1",
++      "resolved": "https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz",
++      "integrity": "sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=",
++      "dev": true,
++      "requires": {
++        "node-fetch": "^1.0.1",
++        "whatwg-fetch": ">=0.10.0"
++      },
++      "dependencies": {
++        "node-fetch": {
++          "version": "1.7.3",
++          "resolved": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.3.tgz",
++          "integrity": "sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==",
++          "dev": true,
++          "requires": {
++            "encoding": "^0.1.11",
++            "is-stream": "^1.0.1"
++          }
++        }
++      }
++    },
+     "isstream": {
+       "version": "0.1.2",
+       "resolved": "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz",
+@@ -15421,6 +15644,16 @@
+       "integrity": "sha512-cY2eLFrQSAfVPhCgH1s7JI73tMbg9YC3v3+ZHVW67sBS7UxWzNEk/ZBbSfLykBWHp33dqqtOv82gjhKEi81T/A==",
+       "dev": true
+     },
++    "loglevelnext": {
++      "version": "1.0.5",
++      "resolved": "https://registry.npmjs.org/loglevelnext/-/loglevelnext-1.0.5.tgz",
++      "integrity": "sha512-V/73qkPuJmx4BcBF19xPBr+0ZRVBhc4POxvZTZdMeXpJ4NItXSJ/MSwuFT0kQJlCbXvdlZoQQ/418bS1y9Jh6A==",
++      "dev": true,
++      "requires": {
++        "es6-symbol": "^3.1.1",
++        "object.assign": "^4.1.0"
++      }
++    },
+     "lolex": {
+       "version": "4.2.0",
+       "resolved": "https://registry.npmjs.org/lolex/-/lolex-4.2.0.tgz",
+@@ -15556,6 +15789,23 @@
+         "unquote": "^1.1.0"
+       }
+     },
++    "marked": {
++      "version": "0.3.19",
++      "resolved": "https://registry.npmjs.org/marked/-/marked-0.3.19.tgz",
++      "integrity": "sha512-ea2eGWOqNxPcXv8dyERdSr/6FmzvWwzjMxpfGB/sbMccXoct+xY+YukPD+QTUZwyvK7BZwcr4m21WBOW41pAkg==",
++      "dev": true
++    },
++    "marksy": {
++      "version": "8.0.0",
++      "resolved": "https://registry.npmjs.org/marksy/-/marksy-8.0.0.tgz",
++      "integrity": "sha512-mmHcKZojCQAGuKTuu3153viXdCuxUmsSxomFaSOBTkOlfWFOZBmDhmJkOp0CsPMNRQ7m6oN2wflvAHLpBNZVPw==",
++      "dev": true,
++      "requires": {
++        "@babel/standalone": "^7.4.5",
++        "he": "^1.2.0",
++        "marked": "^0.3.12"
++      }
++    },
+     "matcher": {
+       "version": "2.1.0",
+       "resolved": "https://registry.npmjs.org/matcher/-/matcher-2.1.0.tgz",
+@@ -16476,6 +16726,18 @@
+       "integrity": "sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==",
+       "dev": true
+     },
++    "nested-object-assign": {
++      "version": "1.0.3",
++      "resolved": "https://registry.npmjs.org/nested-object-assign/-/nested-object-assign-1.0.3.tgz",
++      "integrity": "sha512-kgq1CuvLyUcbcIuTiCA93cQ2IJFSlRwXcN+hLcb2qLJwC2qrePHGZZa7IipyWqaWF6tQjdax2pQnVxdq19Zzwg==",
++      "dev": true
++    },
++    "next-tick": {
++      "version": "1.0.0",
++      "resolved": "https://registry.npmjs.org/next-tick/-/next-tick-1.0.0.tgz",
++      "integrity": "sha1-yobR/ogoFpsBICCOPchCS524NCw=",
++      "dev": true
++    },
+     "nice-try": {
+       "version": "1.0.5",
+       "resolved": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.5.tgz",
+@@ -20165,6 +20427,17 @@
+         "prop-types": "^15.6.2"
+       }
+     },
++    "react-addons-create-fragment": {
++      "version": "15.6.2",
++      "resolved": "https://registry.npmjs.org/react-addons-create-fragment/-/react-addons-create-fragment-15.6.2.tgz",
++      "integrity": "sha1-o5TefCx77Na1R1uhuXrEcs58dPg=",
++      "dev": true,
++      "requires": {
++        "fbjs": "^0.8.4",
++        "loose-envify": "^1.3.1",
++        "object-assign": "^4.1.0"
++      }
++    },
+     "react-base16-styling": {
+       "version": "0.5.3",
+       "resolved": "https://registry.npmjs.org/react-base16-styling/-/react-base16-styling-0.5.3.tgz",
+@@ -20583,6 +20856,23 @@
+         }
+       }
+     },
++    "react-docgen-typescript": {
++      "version": "1.16.2",
++      "resolved": "https://registry.npmjs.org/react-docgen-typescript/-/react-docgen-typescript-1.16.2.tgz",
++      "integrity": "sha512-nECrg2qih81AKp0smkxXebF72/2EjmEn7gXSlWLDHLbpGcbw2yIorol24fw1FWqvndIY82sfSd0x/SyfMKY1Jw==",
++      "dev": true
++    },
++    "react-docgen-typescript-loader": {
++      "version": "3.6.0",
++      "resolved": "https://registry.npmjs.org/react-docgen-typescript-loader/-/react-docgen-typescript-loader-3.6.0.tgz",
++      "integrity": "sha512-+uEsM3VYCdlcBGxF3tBqI5XWL1phvrh8dkiIfdpciKlM1BDHW+d82kKJI9hX6zk9H8TL+3Th/j/JAEaKb5FFNw==",
++      "dev": true,
++      "requires": {
++        "@webpack-contrib/schema-utils": "^1.0.0-beta.0",
++        "loader-utils": "^1.2.3",
++        "react-docgen-typescript": "^1.15.0"
++      }
++    },
+     "react-dock": {
+       "version": "0.2.4",
+       "resolved": "https://registry.npmjs.org/react-dock/-/react-dock-0.2.4.tgz",
+@@ -20613,6 +20903,33 @@
+         "prop-types": "^15.6.0"
+       }
+     },
++    "react-element-to-jsx-string": {
++      "version": "14.3.1",
++      "resolved": "https://registry.npmjs.org/react-element-to-jsx-string/-/react-element-to-jsx-string-14.3.1.tgz",
++      "integrity": "sha512-LRdQWRB+xcVPOL4PU4RYuTg6dUJ/FNmaQ8ls6w38YbzkbV6Yr5tFNESroub9GiSghtnMq8dQg2LcNN5aMIDzVg==",
++      "dev": true,
++      "requires": {
++        "@base2/pretty-print-object": "1.0.0",
++        "is-plain-object": "3.0.0"
++      },
++      "dependencies": {
++        "is-plain-object": {
++          "version": "3.0.0",
++          "resolved": "https://registry.npmjs.org/is-plain-object/-/is-plain-object-3.0.0.tgz",
++          "integrity": "sha512-tZIpofR+P05k8Aocp7UI/2UTa9lTJSebCXpFFoR9aibpokDj/uXBsJ8luUu0tTVYKkMU6URDUuOfJZ7koewXvg==",
++          "dev": true,
++          "requires": {
++            "isobject": "^4.0.0"
++          }
++        },
++        "isobject": {
++          "version": "4.0.0",
++          "resolved": "https://registry.npmjs.org/isobject/-/isobject-4.0.0.tgz",
++          "integrity": "sha512-S/2fF5wH8SJA/kmwr6HYhK/RI/OkhD84k8ntalo0iJjZikgq1XFvR5M8NPT1x5F7fBwCG3qHfnzeP/Vh/ZxCUA==",
++          "dev": true
++        }
++      }
++    },
+     "react-error-overlay": {
+       "version": "6.0.6",
+       "resolved": "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.6.tgz",
+@@ -24836,6 +25153,12 @@
+         "walk": "2.3.x"
+       }
+     },
++    "type": {
++      "version": "1.2.0",
++      "resolved": "https://registry.npmjs.org/type/-/type-1.2.0.tgz",
++      "integrity": "sha512-+5nt5AAniqsCnu2cEQQdpzCAh33kVx8n0VoFidKpB1dVVLAN/F+bgVOqOJqOnEnrhp222clB5p3vUlD+1QAnfg==",
++      "dev": true
++    },
+     "type-check": {
+       "version": "0.3.2",
+       "resolved": "https://registry.npmjs.org/type-check/-/type-check-0.3.2.tgz",
+@@ -26460,6 +26783,12 @@
+         "iconv-lite": "0.4.24"
+       }
+     },
++    "whatwg-fetch": {
++      "version": "3.0.0",
++      "resolved": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz",
++      "integrity": "sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==",
++      "dev": true
++    },
+     "whatwg-mimetype": {
+       "version": "2.3.0",
+       "resolved": "https://registry.npmjs.org/whatwg-mimetype/-/whatwg-mimetype-2.3.0.tgz",
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"budget\",\n  \"version\": \"0.0.1-SNAPSHOT\",\n  \"description\": \"Description for budget\",\n  \"private\": true,\n  \"license\": \"UNLICENSED\",\n  \"cacheDirectories\": [\n    \"node_modules\"\n  ],\n  \"dependencies\": {\n    \"@fortawesome/fontawesome-svg-core\": \"1.2.26\",\n    \"@fortawesome/free-solid-svg-icons\": \"5.12.0\",\n    \"@fortawesome/react-fontawesome\": \"0.1.8\",\n    \"availity-reactstrap-validation\": \"2.5.1\",\n    \"axios\": \"0.19.0\",\n    \"bootstrap\": \"4.4.1\",\n    \"loaders.css\": \"0.1.2\",\n    \"lodash\": \"4.17.15\",\n    \"moment\": \"2.24.0\",\n    \"nodemon\": \"^2.0.2\",\n    \"react\": \"16.12.0\",\n    \"react-dom\": \"16.12.0\",\n    \"react-hot-loader\": \"4.12.18\",\n    \"react-jhipster\": \"0.9.1\",\n    \"react-loadable\": \"5.5.0\",\n    \"react-redux\": \"7.1.3\",\n    \"react-redux-loading-bar\": \"4.5.0\",\n    \"react-router-dom\": \"5.1.2\",\n    \"react-toastify\": \"4.5.2\",\n    \"react-transition-group\": \"2.7.0\",\n    \"reactstrap\": \"7.1.0\",\n    \"redux\": \"4.0.4\",\n    \"redux-devtools\": \"3.5.0\",\n    \"redux-devtools-dock-monitor\": \"1.1.3\",\n    \"redux-devtools-log-monitor\": \"1.4.0\",\n    \"redux-promise-middleware\": \"6.1.2\",\n    \"redux-thunk\": \"2.3.0\",\n    \"ts-node\": \"^8.6.2\",\n    \"tslib\": \"1.10.0\",\n    \"uuid\": \"3.3.3\"\n  },\n  \"devDependencies\": {\n    \"@babel/core\": \"^7.8.4\",\n    \"@openapitools/openapi-generator-cli\": \"0.0.14-4.0.2\",\n    \"@storybook/addon-actions\": \"^5.3.13\",\n    \"@storybook/addon-links\": \"^5.3.13\",\n    \"@storybook/addons\": \"^5.3.13\",\n    \"@storybook/react\": \"^5.3.13\",\n    \"@types/enzyme\": \"3.9.1\",\n    \"@types/jest\": \"24.0.23\",\n    \"@types/lodash\": \"4.14.149\",\n    \"@types/node\": \"12.12.17\",\n    \"@types/react\": \"16.9.16\",\n    \"@types/react-dom\": \"16.9.4\",\n    \"@types/react-redux\": \"6.0.6\",\n    \"@types/react-router-dom\": \"5.1.3\",\n    \"@types/redux\": \"3.6.31\",\n    \"@types/webpack-env\": \"1.14.1\",\n    \"@typescript-eslint/eslint-plugin\": \"2.11.0\",\n    \"@typescript-eslint/parser\": \"2.11.0\",\n    \"autoprefixer\": \"9.7.3\",\n    \"babel-loader\": \"^8.0.6\",\n    \"base-href-webpack-plugin\": \"2.0.0\",\n    \"browser-sync\": \"2.26.7\",\n    \"browser-sync-webpack-plugin\": \"2.2.2\",\n    \"cache-loader\": \"4.1.0\",\n    \"copy-webpack-plugin\": \"5.1.0\",\n    \"core-js\": \"3.4.8\",\n    \"cross-env\": \"6.0.3\",\n    \"css-loader\": \"3.3.0\",\n    \"enzyme\": \"3.10.0\",\n    \"enzyme-adapter-react-16\": \"1.15.1\",\n    \"enzyme-to-json\": \"3.4.3\",\n    \"eslint\": \"6.7.2\",\n    \"eslint-config-jhipster\": \"0.0.1\",\n    \"eslint-config-jhipster-react\": \"0.0.1\",\n    \"eslint-config-prettier\": \"6.7.0\",\n    \"eslint-loader\": \"3.0.3\",\n    \"eslint-plugin-react\": \"7.17.0\",\n    \"file-loader\": \"5.0.2\",\n    \"fork-ts-checker-webpack-plugin\": \"3.1.1\",\n    \"friendly-errors-webpack-plugin\": \"1.7.0\",\n    \"generator-jhipster\": \"6.6.0\",\n    \"html-webpack-plugin\": \"3.2.0\",\n    \"husky\": \"3.1.0\",\n    \"identity-obj-proxy\": \"3.0.0\",\n    \"jest\": \"24.9.0\",\n    \"jest-junit\": \"10.0.0\",\n    \"jest-sonar-reporter\": \"2.0.0\",\n    \"json-loader\": \"0.5.7\",\n    \"lint-staged\": \"9.5.0\",\n    \"mini-css-extract-plugin\": \"0.8.0\",\n    \"moment-locales-webpack-plugin\": \"1.1.2\",\n    \"optimize-css-assets-webpack-plugin\": \"5.0.3\",\n    \"postcss-loader\": \"3.0.0\",\n    \"prettier\": \"1.19.1\",\n    \"react-infinite-scroller\": \"1.2.4\",\n    \"redux-mock-store\": \"1.5.4\",\n    \"rimraf\": \"3.0.0\",\n    \"sass\": \"1.23.7\",\n    \"sass-loader\": \"8.0.0\",\n    \"simple-progress-webpack-plugin\": \"1.1.2\",\n    \"sinon\": \"7.5.0\",\n    \"source-map-loader\": \"0.2.4\",\n    \"sourcemap-istanbul-instrumenter-loader\": \"0.2.0\",\n    \"stripcomment-loader\": \"0.1.0\",\n    \"style-loader\": \"1.0.1\",\n    \"swagger-ui-dist\": \"3.24.3\",\n    \"terser-webpack-plugin\": \"2.2.3\",\n    \"thread-loader\": \"2.1.3\",\n    \"to-string-loader\": \"1.1.6\",\n    \"ts-jest\": \"24.2.0\",\n    \"ts-loader\": \"6.2.1\",\n    \"typescript\": \"3.7.3\",\n    \"webpack\": \"4.41.2\",\n    \"webpack-cli\": \"3.3.10\",\n    \"webpack-dev-server\": \"3.9.0\",\n    \"webpack-merge\": \"4.2.2\",\n    \"webpack-notifier\": \"1.8.0\",\n    \"workbox-webpack-plugin\": \"4.3.1\",\n    \"write-file-webpack-plugin\": \"4.5.1\"\n  },\n  \"engines\": {\n    \"node\": \">=8.9.0\"\n  },\n  \"scripts\": {\n    \"prettier:format\": \"prettier --write \\\"{,src/**/}*.{md,json,ts,tsx,css,scss,yml}\\\"\",\n    \"lint\": \"eslint . --ext .js,.ts,.jsx,.tsx\",\n    \"lint:fix\": \"npm run lint -- --fix\",\n    \"cleanup\": \"rimraf target/classes/static/\",\n    \"build\": \"npm run webpack:prod\",\n    \"build:app\": \"npm run build && cd server && npm run build\",\n    \"start\": \"npm run webpack:dev\",\n    \"start:app\": \"npm run build && cd server && npm run start\",\n    \"start-tls\": \"npm run webpack:dev -- --env.tls\",\n    \"jest\": \"jest --coverage --logHeapUsage --maxWorkers=2 --config src/test/javascript/jest.conf.js\",\n    \"jest:update\": \"npm run jest -- --updateSnapshot\",\n    \"test\": \"npm run lint && npm run jest\",\n    \"test-ci\": \"npm run lint && npm run jest:update\",\n    \"test:watch\": \"npm test -- --watch\",\n    \"webpack:dev\": \"npm run webpack-dev-server -- --config webpack/webpack.dev.js --inline --port=9060 --env.stats=minimal\",\n    \"webpack:dev-verbose\": \"npm run webpack-dev-server -- --config webpack/webpack.dev.js --inline --port=9060 --profile --progress --env.stats=normal\",\n    \"webpack:build:main\": \"npm run webpack -- --config webpack/webpack.dev.js --env.stats=minimal\",\n    \"webpack:build\": \"npm run cleanup && npm run webpack:build:main\",\n    \"webpack:prod:main\": \"npm run webpack -- --config webpack/webpack.prod.js --profile\",\n    \"webpack:prod\": \"npm run cleanup && npm run webpack:prod:main\",\n    \"webpack:test\": \"npm run test\",\n    \"webpack-dev-server\": \"node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js\",\n    \"webpack\": \"node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js\",\n    \"storybook\": \"start-storybook -p 6006\",\n    \"build-storybook\": \"build-storybook\"\n  },\n  \"jestSonar\": {\n    \"reportPath\": \"target/test-results/jest\",\n    \"reportFile\": \"TESTS-results-sonar.xml\"\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- package.json	(revision 580151209b6a40bb7f9eb8a72b2edb4ddc3c145e)
++++ package.json	(date 1582393291654)
+@@ -43,8 +43,10 @@
+     "@babel/core": "^7.8.4",
+     "@openapitools/openapi-generator-cli": "0.0.14-4.0.2",
+     "@storybook/addon-actions": "^5.3.13",
++    "@storybook/addon-info": "^5.3.13",
+     "@storybook/addon-links": "^5.3.13",
+     "@storybook/addons": "^5.3.13",
++    "@storybook/preset-typescript": "^1.2.0",
+     "@storybook/react": "^5.3.13",
+     "@types/enzyme": "3.9.1",
+     "@types/jest": "24.0.23",
+@@ -55,6 +57,7 @@
+     "@types/react-redux": "6.0.6",
+     "@types/react-router-dom": "5.1.3",
+     "@types/redux": "3.6.31",
++    "@types/storybook__addon-info": "^5.2.1",
+     "@types/webpack-env": "1.14.1",
+     "@typescript-eslint/eslint-plugin": "2.11.0",
+     "@typescript-eslint/parser": "2.11.0",
+@@ -94,6 +97,7 @@
+     "optimize-css-assets-webpack-plugin": "5.0.3",
+     "postcss-loader": "3.0.0",
+     "prettier": "1.19.1",
++    "react-docgen-typescript-loader": "^3.6.0",
+     "react-infinite-scroller": "1.2.4",
+     "redux-mock-store": "1.5.4",
+     "rimraf": "3.0.0",
+Index: .storybook/main.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>module.exports = {\n  stories: ['../stories/**/*.stories.js'],\n  addons: ['@storybook/addon-actions', '@storybook/addon-links'],\n  webpackFinal: async config => {\n    // do mutation to the config\n\n    return config;\n  },\n};\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .storybook/main.js	(revision 580151209b6a40bb7f9eb8a72b2edb4ddc3c145e)
++++ .storybook/main.js	(date 1582393807207)
+@@ -1,9 +1,21 @@
+ module.exports = {
+-  stories: ['../stories/**/*.stories.js'],
++  stories: ['../stories/**/*.stories.tsx'],
+   addons: ['@storybook/addon-actions', '@storybook/addon-links'],
+   webpackFinal: async config => {
+     // do mutation to the config
+-
++    config.module.rules.push({
++      test: /\.(ts|tsx)$/,
++      use: [
++        {
++          loader: require.resolve('ts-loader')
++        },
++        // Optional
++        {
++          loader: require.resolve('react-docgen-typescript-loader')
++        }
++      ]
++    });
++    config.resolve.extensions.push('.ts', 'tsx');
+     return config;
+-  },
++  }
+ };
+Index: stories/0-Welcome.stories.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\nimport { linkTo } from '@storybook/addon-links';\nimport { Welcome } from '@storybook/react/demo';\n\nexport default {\n  title: 'Welcome',\n  component: Welcome,\n};\n\nexport const ToStorybook = () => <Welcome showApp={linkTo('Button')} />;\n\nToStorybook.story = {\n  name: 'to Storybook',\n};\n
+===================================================================
+--- stories/0-Welcome.stories.js	(revision 580151209b6a40bb7f9eb8a72b2edb4ddc3c145e)
++++ stories/0-Welcome.stories.tsx	(date 1582392861467)
+@@ -1,14 +1,17 @@
+-import React from 'react';
++import * as React from 'react';
+ import { linkTo } from '@storybook/addon-links';
+ import { Welcome } from '@storybook/react/demo';
+ 
+ export default {
+   title: 'Welcome',
+   component: Welcome,
++  parameters: {
++    info: { inline: true }
++  }
+ };
+ 
+ export const ToStorybook = () => <Welcome showApp={linkTo('Button')} />;
+ 
+ ToStorybook.story = {
+-  name: 'to Storybook',
++  name: 'to Storybook'
+ };
+Index: src/main/webapp/app/shared/components/test.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/webapp/app/shared/components/test.tsx	(date 1582393958377)
++++ src/main/webapp/app/shared/components/test.tsx	(date 1582393958377)
+@@ -0,0 +1,3 @@
++import * as React from 'react';
++
++export const Test = () => <div>Test</div>;
+Index: stories/1-Button.stories.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\n\nimport { action } from '@storybook/addon-actions';\nimport { Button } from '@storybook/react/demo';\n\nexport default {\n  title: 'Button',\n  component: Button,\n};\n\nexport const Text = () => <Button onClick={action('clicked')}>Hello Button</Button>;\n\nexport const Emoji = () => (\n  <Button onClick={action('clicked')}>\n    <span role=\"img\" aria-label=\"so cool\">\n      \uD83D\uDE00 \uD83D\uDE0E \uD83D\uDC4D \uD83D\uDCAF\n    </span>\n  </Button>\n);\n\nEmoji.story = {\n  name: 'with emoji',\n};\n
+===================================================================
+--- stories/1-Button.stories.js	(revision 580151209b6a40bb7f9eb8a72b2edb4ddc3c145e)
++++ stories/1-Button.stories.tsx	(date 1582392894024)
+@@ -1,4 +1,4 @@
+-import React from 'react';
++import * as React from 'react';
+ 
+ import { action } from '@storybook/addon-actions';
+ import { Button } from '@storybook/react/demo';
+@@ -6,6 +6,9 @@
+ export default {
+   title: 'Button',
+   component: Button,
++  parameters: {
++    info: { inline: true }
++  }
+ };
+ 
+ export const Text = () => <Button onClick={action('clicked')}>Hello Button</Button>;
+@@ -19,5 +22,5 @@
+ );
+ 
+ Emoji.story = {
+-  name: 'with emoji',
++  name: 'with emoji'
+ };
+Index: stories/2-Test.stories.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- stories/2-Test.stories.tsx	(date 1582394361655)
++++ stories/2-Test.stories.tsx	(date 1582394361655)
+@@ -0,0 +1,12 @@
++import * as React from 'react';
++import { Test } from './shared/components/test';
++
++export default {
++  title: 'Test',
++  component: Test,
++  parameters: {
++    info: { inline: true }
++  }
++};
++
++export const TestItem = () => <Test></Test>;

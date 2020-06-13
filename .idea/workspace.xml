@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae3499b3-27c1-4bd1-9f39-7a29608360e9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="book_entity" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectId" id="1YAGvRi5nWXMqHAFohzJEdrujLP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="compactDirectories" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/stories" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/stories" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/app/shared/error" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/stories" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BudgetApp">
+    <configuration name="BudgetApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="budget" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.hanquez.budget.BudgetApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:app" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:app" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="storybook" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="storybook" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.storybook" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.start:app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae3499b3-27c1-4bd1-9f39-7a29608360e9" name="Default Changelist" comment="" />
+      <created>1582378216107</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582378216107</updated>
+      <workItem from="1582378219794" duration="31000" />
+      <workItem from="1582378274809" duration="5756000" />
+      <workItem from="1583659372255" duration="175000" />
+      <workItem from="1583659800072" duration="63000" />
+      <workItem from="1583862951703" duration="60000" />
+      <workItem from="1583863038160" duration="348000" />
+      <workItem from="1583863438150" duration="168000" />
+      <workItem from="1583863621454" duration="1753000" />
+      <workItem from="1584012309744" duration="811000" />
+      <workItem from="1592034699733" duration="2831000" />
+      <workItem from="1592037729613" duration="91000" />
+    </task>
+    <task id="LOCAL-00001" summary="Re bootstrap the project with jhipster-nodejs blueprint, for now i18n is missing">
+      <created>1582380029870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582380029870</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add storybook in JS mode">
+      <created>1582380389186</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582380389186</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add typescript support for storybook">
+      <created>1583863964736</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583863964736</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Re bootstrap the project with jhipster-nodejs blueprint, for now i18n is missing" />
+    <MESSAGE value="Add storybook in JS mode" />
+    <MESSAGE value="Add typescript support for storybook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add typescript support for storybook" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1120" y="433" key="#ESLint" timestamp="1592034853131">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="1120" y="433" key="#ESLint/0.23.1680.1027@0.23.1680.1027" timestamp="1592034853131" />
+    <state x="948" y="271" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583863597641">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="948" y="271" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1583863597641" />
+    <state x="812" y="139" key="CommitChangelistDialog2" timestamp="1583863964799">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="812" y="139" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1583863964799" />
+    <state width="798" height="280" key="GridCell.Tab.0.bottom" timestamp="1592037674807">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="798" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1592037674807" />
+    <state width="798" height="280" key="GridCell.Tab.0.bottom/0.23.2560.1417/-1680.214.1680.1027@0.23.2560.1417" timestamp="1584017336149" />
+    <state width="798" height="280" key="GridCell.Tab.0.center" timestamp="1592037674806">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="798" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1592037674806" />
+    <state width="798" height="280" key="GridCell.Tab.0.center/0.23.2560.1417/-1680.214.1680.1027@0.23.2560.1417" timestamp="1584017336148" />
+    <state width="798" height="280" key="GridCell.Tab.0.left" timestamp="1592037674806">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="798" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1592037674806" />
+    <state width="798" height="280" key="GridCell.Tab.0.left/0.23.2560.1417/-1680.214.1680.1027@0.23.2560.1417" timestamp="1584017336147" />
+    <state width="798" height="280" key="GridCell.Tab.0.right" timestamp="1592037674807">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="798" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1592037674807" />
+    <state width="798" height="280" key="GridCell.Tab.0.right/0.23.2560.1417/-1680.214.1680.1027@0.23.2560.1417" timestamp="1584017336149" />
+    <state x="683" y="175" key="SettingsEditor" timestamp="1592034716895">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="683" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1592034716895" />
+    <state x="1023" y="388" width="542" height="482" key="cloudConfig.SelfSettingsDialog" timestamp="1583863998868">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="1023" y="388" width="542" height="482" key="cloudConfig.SelfSettingsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1583863998868" />
+    <state x="1003" y="258" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592037759157">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="1003" y="258" key="git4idea.branch.GitSmartOperationDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1592037759157" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1584012486154">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1584012486154" />
+  </component>
+</project>
