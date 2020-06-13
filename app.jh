@@ -1,0 +1,33 @@
+/**
+ * The application configuration.
+ * @author A true hipster
+ */
+application {
+    config {
+        baseName hudget
+        applicationType monolith
+        authenticationType jwt
+        buildTool maven
+        cacheProvider ehcache
+        clientFramework react
+        clientPackageManager npm
+        databaseType sql
+        devDatabaseType h2Disk
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        jhiPrefix jhi
+        languages [en, fr]
+        nativeLanguage fr
+        packageName com.hanquez.hudget
+        prodDatabaseType postgresql
+        searchEngine false
+        testFrameworks [protractor, gatling]
+        useSass true
+        websocket spring-websocket
+    }
+}
+dto * with mapstruct
+paginate * with pagination
+filter *
+service * with serviceClass
