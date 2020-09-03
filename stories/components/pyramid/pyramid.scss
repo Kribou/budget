@@ -1,0 +1,69 @@
+.pyramid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .brick,
+  .base {
+    &:hover {
+      cursor: pointer;
+      background-color: #7ec699;
+    }
+  }
+
+  .base {
+    background-color: #d9d9d9;
+  }
+
+  .base {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #d9d9d9;
+    padding: 10px 25px 10px 25px;
+  }
+
+  .brick {
+    width: 100%;
+    position: relative;
+    padding: 5px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      border: 3px solid #fbcc00;
+      background-color: #fbcc00;
+
+      top: -4%;
+      bottom: -11%;
+      left: -22px;
+      right: 67px;
+      z-index: -1;
+
+      transform: perspective(30em) rotateX(30deg) translateX(5%);
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pyramid-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .left-row-cell:before {
+    right: 0;
+  }
+  .right-row-cell:before {
+    left: 0;
+  }
+}

@@ -22,7 +22,7 @@ export const RegisterPage = (props: IRegisterProps) => {
 
   const handleValidSubmit = (event, values) => {
     props.handleRegister(values.username, values.email, values.firstPassword, props.currentLocale);
-    event.preventDefault();
+    event.persist();
   };
 
   const updatePassword = event => setPassword(event.target.value);
@@ -41,6 +41,7 @@ export const RegisterPage = (props: IRegisterProps) => {
           <AvForm id="register-form" onValidSubmit={handleValidSubmit}>
             <AvField
               name="username"
+              autoComplete="username"
               label={translate('global.form.username.label')}
               placeholder={translate('global.form.username.placeholder')}
               validate={{
@@ -55,6 +56,7 @@ export const RegisterPage = (props: IRegisterProps) => {
             />
             <AvField
               name="email"
+              autoComplete="email"
               label={translate('global.form.email.label')}
               placeholder={translate('global.form.email.placeholder')}
               type="email"
@@ -66,6 +68,7 @@ export const RegisterPage = (props: IRegisterProps) => {
             />
             <AvField
               name="firstPassword"
+              autoComplete="new-password"
               label={translate('global.form.newpassword.label')}
               placeholder={translate('global.form.newpassword.placeholder')}
               type="password"
@@ -79,6 +82,7 @@ export const RegisterPage = (props: IRegisterProps) => {
             <PasswordStrengthBar password={password} />
             <AvField
               name="secondPassword"
+              autoComplete="new-password"
               label={translate('global.form.confirmpassword.label')}
               placeholder={translate('global.form.confirmpassword.placeholder')}
               type="password"

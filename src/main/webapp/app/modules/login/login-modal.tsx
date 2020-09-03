@@ -3,6 +3,7 @@ import { Translate, translate } from 'react-jhipster';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Label, Alert, Row, Col } from 'reactstrap';
 import { AvForm, AvField, AvGroup, AvInput } from 'availity-reactstrap-validation';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export interface ILoginModalProps {
   showModal: boolean;
@@ -24,6 +25,7 @@ class LoginModal extends React.Component<ILoginModalProps> {
       <Modal isOpen={this.props.showModal} toggle={handleClose} backdrop="static" id="login-page" autoFocus={false}>
         <AvForm onSubmit={this.handleSubmit}>
           <ModalHeader id="login-title" toggle={handleClose}>
+            <FontAwesomeIcon icon="eye" />
             <Translate contentKey="login.title">Sign in</Translate>
           </ModalHeader>
           <ModalBody>
@@ -45,6 +47,7 @@ class LoginModal extends React.Component<ILoginModalProps> {
                   required
                   errorMessage="Username cannot be empty!"
                   autoFocus
+                  autoComplete="username"
                 />
                 <AvField
                   name="password"
@@ -53,6 +56,7 @@ class LoginModal extends React.Component<ILoginModalProps> {
                   placeholder={translate('login.form.password.placeholder')}
                   required
                   errorMessage="Password cannot be empty!"
+                  autoComplete="current-password"
                 />
                 <AvGroup check inline>
                   <Label className="form-check-label">

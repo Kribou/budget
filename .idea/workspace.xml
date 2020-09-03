@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae3499b3-27c1-4bd1-9f39-7a29608360e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/checkstyle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/budget.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/budget.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.storybook/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.storybook/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/1-Header.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/2-Footer.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/3-Password-strength.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/4-Login-modal.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/5-Pyramid.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/components/provider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/components/pyramid/pyramid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/components/pyramid/pyramid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/configs/contexts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/decorators/withIcons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/decorators/withProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stories/decorators/withRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/config/icon-loader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/config/icon-loader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/config/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/config/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/account/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/account/register/register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/login/login-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/login/login-modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack/webpack.dev.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +68,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/stories" />
@@ -65,11 +85,13 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/stories/components/pyramid" />
+      <recent name="$PROJECT_DIR$/stories/configs" />
       <recent name="$PROJECT_DIR$/stories" />
       <recent name="$PROJECT_DIR$/src/main/webapp/app/shared/error" />
     </key>
@@ -157,7 +179,10 @@
       <workItem from="1592034699733" duration="2831000" />
       <workItem from="1592037729613" duration="91000" />
       <workItem from="1592038829699" duration="5000" />
-      <workItem from="1592038859794" duration="773000" />
+      <workItem from="1592038859794" duration="9112000" />
+      <workItem from="1592381890466" duration="260000" />
+      <workItem from="1592382173060" duration="35710000" />
+      <workItem from="1592905062301" duration="1234000" />
     </task>
     <task id="LOCAL-00001" summary="Re bootstrap the project with jhipster-nodejs blueprint, for now i18n is missing">
       <created>1582380029870</created>
@@ -180,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583863964736</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Generated via jhipster 6.9.1">
+      <created>1592039875672</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592039875672</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +235,8 @@
     <MESSAGE value="Re bootstrap the project with jhipster-nodejs blueprint, for now i18n is missing" />
     <MESSAGE value="Add storybook in JS mode" />
     <MESSAGE value="Add typescript support for storybook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add typescript support for storybook" />
+    <MESSAGE value="Generated via jhipster 6.9.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generated via jhipster 6.9.1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1120" y="433" key="#ESLint" timestamp="1592034853131">
@@ -218,14 +251,18 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="948" y="271" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1583863597641" />
-    <state x="812" y="139" key="CommitChangelistDialog2" timestamp="1583863964799">
+    <state x="812" y="111" key="CommitChangelistDialog2" timestamp="1592039860701">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="812" y="139" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1583863964799" />
+    <state x="812" y="111" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1592039860701" />
     <state width="254" height="192" key="DatabaseViewActions_Filter" timestamp="1592039523223">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="254" height="192" key="DatabaseViewActions_Filter/0.23.1680.1027@0.23.1680.1027" timestamp="1592039523223" />
+    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1592042378698">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1592042378698" />
     <state width="798" height="280" key="GridCell.Tab.0.bottom" timestamp="1592037674807">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -246,21 +283,48 @@
     </state>
     <state width="798" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1592037674807" />
     <state width="798" height="280" key="GridCell.Tab.0.right/0.23.2560.1417/-1680.214.1680.1027@0.23.2560.1417" timestamp="1584017336149" />
-    <state x="683" y="175" key="SettingsEditor" timestamp="1592034716895">
+    <state x="1041" y="233" key="SettingsEditor" timestamp="1592403051802">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1041" y="233" key="SettingsEditor/-1680.214.1680.1027/0.23.2560.1417@0.23.2560.1417" timestamp="1592403051802" />
+    <state x="683" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1592034716895" />
+    <state x="1650" y="470" width="540" height="524" key="StructurePopup" timestamp="1592579673856">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1650" y="470" width="540" height="524" key="StructurePopup/-1680.214.1680.1027/0.23.2560.1417@0.23.2560.1417" timestamp="1592579673856" />
+    <state x="860" y="278" key="Vcs.Push.Dialog.v2" timestamp="1592039879455">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="683" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1592034716895" />
+    <state x="860" y="278" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1592039879455" />
     <state x="1023" y="388" width="542" height="482" key="cloudConfig.SelfSettingsDialog" timestamp="1583863998868">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="1023" y="388" width="542" height="482" key="cloudConfig.SelfSettingsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1583863998868" />
+    <state x="1380" y="123" width="1180" height="1317" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592404419779">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1380" y="123" width="1180" height="1317" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1680.214.1680.1027/0.23.2560.1417@0.23.2560.1417" timestamp="1592404419779" />
+    <state x="821" y="404" width="918" height="654" key="find.popup" timestamp="1592474973293">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="821" y="404" width="918" height="654" key="find.popup/-1680.214.1680.1027/0.23.2560.1417@0.23.2560.1417" timestamp="1592474973293" />
+    <state x="539" y="299" width="602" height="474" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1592041777158" />
     <state x="1003" y="258" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592037759157">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="1003" y="258" key="git4idea.branch.GitSmartOperationDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1592037759157" />
-    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1584012486154">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="1585" y="346" width="670" height="675" key="run.anything.popup" timestamp="1592471463390">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1584012486154" />
+    <state x="1585" y="346" width="670" height="675" key="run.anything.popup/-1680.214.1680.1027/0.23.2560.1417@0.23.2560.1417" timestamp="1592471463390" />
+    <state x="1080" y="598" key="scopes" timestamp="1592405514189">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1080" y="598" key="scopes/-1680.214.1680.1027/0.23.2560.1417@0.23.2560.1417" timestamp="1592405514189" />
+    <state x="770" y="336" width="1021" height="933" key="search.everywhere.popup" timestamp="1592468870502">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="770" y="336" width="1021" height="933" key="search.everywhere.popup/-1680.214.1680.1027/0.23.2560.1417@0.23.2560.1417" timestamp="1592468870502" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1592043502601" />
   </component>
 </project>
